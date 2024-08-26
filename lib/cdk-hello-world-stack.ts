@@ -16,14 +16,11 @@ export class CdkHelloWorldStack extends cdk.Stack {
     })
 
     // Define the API Gateway resource
-    const api = new apigateway.LambdaRestApi(this, "HelloWorldApi", {
-      handler: helloWorldFunction,
-      minCompressionSize: Size.bytes(0),
-      proxy: false,
-    })
+    const api = new apigateway.RestApi(this, "HelloWorldApi", { minCompressionSize: Size.bytes(0) })
 
-    // Define the '/hello' resource with a GET method
-    const helloResource = api.root.addResource("hello")
-    helloResource.addMethod("GET")
+    // Define the '/bgg/{command}' resource with a GET method
+    const bggResource = api.root.addResource("bgg")
+    const commandResource = bggResource.addResource("{command}")
+    commandResource.addMethod("GET", new apigateway.LambdaIntegration(helloWorldFunction))
   }
 }
