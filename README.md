@@ -13,6 +13,14 @@ The `cdk.json` file tells the CDK Toolkit how to execute your app.
 - `npx cdk diff` compare deployed stack with current state
 - `npx cdk synth` emits the synthesized CloudFormation template
 
-## Production resources
+## Installing dependencies
+
+- `npm install -g aws-cdk`
+- `npm install`
+- `cd lambda; npm install`
+
+## Deploying production resources
+
+- `cdk deploy`
 
 CDKStack.ProxyApiEndpoint2177970D = <https://yislvgv5t8.execute-api.us-east-1.amazonaws.com/prod/>
