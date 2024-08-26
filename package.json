@@ -1,8 +1,8 @@
 {
-  "name": "cdk-hello-world",
+  "name": "cdk-bgg",
   "version": "0.1.0",
   "bin": {
-    "cdk-hello-world": "bin/cdk-hello-world.js"
+    "cdk-app": "bin/cdk-app.js"
   },
   "scripts": {
     "build": "tsc",

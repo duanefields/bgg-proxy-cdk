@@ -1,13 +1,13 @@
 {
   "name": "lambda",
   "version": "1.0.0",
-  "main": "hello.js",
+  "main": "proxy.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
-  "types": "./hello.d.ts",
+  "types": "./proxy.d.ts",
   "description": "",
   "dependencies": {
     "x2js": "^3.4.4"
