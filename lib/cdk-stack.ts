@@ -1,5 +1,4 @@
 import * as cdk from "aws-cdk-lib"
-import { Size } from "aws-cdk-lib"
 import * as apigateway from "aws-cdk-lib/aws-apigateway"
 import * as lambda from "aws-cdk-lib/aws-lambda"
 import { Construct } from "constructs"
@@ -17,7 +16,7 @@ export class CDKStack extends cdk.Stack {
     })
 
     // Define the API Gateway resource
-    const api = new apigateway.RestApi(this, "ProxyApi", { minCompressionSize: Size.bytes(0) })
+    const api = new apigateway.RestApi(this, "ProxyApi", { minCompressionSize: cdk.Size.bytes(0) })
 
     // Define the '/bgg/{command}' resource with a GET method
     const bggResource = api.root.addResource("bgg")
