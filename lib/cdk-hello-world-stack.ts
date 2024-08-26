@@ -13,6 +13,7 @@ export class CdkHelloWorldStack extends cdk.Stack {
       runtime: lambda.Runtime.NODEJS_20_X, // Choose any supported Node.js runtime
       code: lambda.Code.fromAsset("lambda"), // Points to the lambda directory
       handler: "hello.handler", // Points to the 'hello' file in the lambda directory
+      timeout: cdk.Duration.seconds(29), // Set the timeout to 29 seconds
     })
 
     // Define the API Gateway resource
