@@ -24,3 +24,12 @@ The `cdk.json` file tells the CDK Toolkit how to execute your app.
 - `cdk deploy`
 
 CDKStack.ProxyApiEndpoint2177970D = <https://yislvgv5t8.execute-api.us-east-1.amazonaws.com/prod/>
+
+## Running and testing locally
+
+Install AWS SAM:
+<https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/install-sam-cli.html#install-sam-cli-instructions>
+
+- `sam local start-api -t ./cdk.out/CDKStack.template.json`
+
+<http://127.0.0.1:3000/bgg/collection?username=dkf2112>
