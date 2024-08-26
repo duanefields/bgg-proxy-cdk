@@ -1,6 +1,8 @@
-# Welcome to your CDK TypeScript project
+# BGG Proxy
 
-This is a blank project for CDK development with TypeScript.
+This is a simple proxy server for talking to the BGG XML API at
+<https://www.boardgamegeek.com/xmlapi2>. It adds CORS support and converts the response from XML to
+(somewhat ugly) JSON. It is built using Amazon Cloud Development Kit (CDK).
 
 The `cdk.json` file tells the CDK Toolkit how to execute your app.
 
